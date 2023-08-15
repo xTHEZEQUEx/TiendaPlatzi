@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contraseña</title>
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Quicksand:wght@300;500;700&display=swap');
+            
+            
+            :root{
+            --titulos: 20px;
+            --subtitulos: 16px;
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --dark: #232830;
+        }
+        body{
+            margin: 2.5%;
+            font-family: 'Quicksand', sans-serif;
+        }
+        /*@media ( max-width: 768px){ -->*/
+            
+            .login{
+                width: 100%;
+                display: grid;
+                place-items: center;
+            }    
+            .contenedorLogin{
+                width: 100%;
+                margin: 5%;
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                justify-items: center;
+            }
+            .contenedorLogin .logo{
+                display: none;
+            }
+            .contenedorLogin h1{
+                font-size: var(--titulos);
+                text-align: center;
+                margin-bottom: 0;
+            }
+            .contenedorLogin p{
+                font-size: var(--subtitulos);
+                color: var(--very-light-pink);
+                text-align: center;
+            }
+            .contenedorLogin p.message{
+                color: var(--black);
+                text-align: center;
+            }
+            .contenedorLogin a{
+                color: var(--hospital-green);
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            .emailBackground{
+                display: flex;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: var(--text-input-field);
+                margin-bottom: 5%;
+            }
+            .loginButton{
+                border: none;
+                border-radius: 5px;
+                background-color: var(--hospital-green);
+                color: var(--white);
+                height: 35px;
+                font-weight: bold;
+                width: 100%;
+                margin-top: 2%;
+            }
+            @media (max-width:768px){
+                .contenedorLogin .logo{
+                    display: block;
+                    justify-self: center;
+                    margin-top: 1%;
+                    margin-bottom: 2.5%;
+                    width: 50%;
+                }
+                .contenedorLogin .logoEmail{
+                    display: block;
+                    justify-self: center;
+                    margin-top: 1%;
+                    padding: 25%;
+                    margin-bottom: 2.5%;
+                    width: 65%;
+                }
+            }
+    </style>
+</head>
+<body>
+    <section class="login" id="login">
+        <div class="contenedorLogin">
+            <img class="logo" src="./Logos/logo_yard_sale.svg">
+            <h1 class="title">
+                Email has been sent!
+            </h1>
+            <p class="subtitle">
+                Please check your inbox for instructions on how to reset the password
+            </p>
+            <div class="emailBackground">
+                <img src="./Icons/email.svg" class="logoEmail">
+            </div>
+            <button class="loginButton">Login</button>
+            <p class="message">Didn't receive the email? <a href="/">Resend</a></p>
+        </div>
+    </section>
+</body>
+</html>
