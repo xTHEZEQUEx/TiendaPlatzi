@@ -57,6 +57,10 @@
                 display: flex;
                 flex-direction: column;
             }
+            form div{
+                display: flex;
+                flex-direction: column;
+            }
             .contenedorLogin .form .label{
                 margin-bottom: 10px;
                 font-weight: 700;
@@ -108,6 +112,20 @@
                     margin-bottom: 2.5%;
                     width: 75%;
                 }
+                .contenedorLogin{
+                    width: 100%;
+                    height: 100%;
+                    margin: 5%;
+                    display: grid;
+                    grid-template-rows: auto 1fr auto;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .form{
+                    height: 100%;
+                    justify-content: space-between;
+                }
                 .signup{
                     margin-top: 30%;
                     width: 100%;
@@ -122,14 +140,16 @@
         <div class="contenedorLogin">
             <img class="logo" src="./Logos/logo_yard_sale.svg">
             <form class="form" action="email.html">
-                <label for="email" class="label">Email</label>
-                <input type="email" id="email" placeholder="Enter your email" class="input">
-                <label for="newPassword" class="label">Password</label>
-                <input type="password" id="newPassword" placeholder="*******" class="input">
-                <input type="submit" value="Login" class="primaryButton loginButton">
-                <a href="/">Forgot my password</a>
+                <div>
+                    <label for="email" class="label">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" class="input">
+                    <label for="newPassword" class="label">Password</label>
+                    <input type="password" id="newPassword" placeholder="*******" class="input">
+                    <input type="submit" value="Login" class="primaryButton loginButton">
+                    <a href="/">Forgot my password</a>
+                </div>
+                <button class="signup">Sign Up</button>
             </form>
-            <button class="signup">Sign Up</button>
         </div>
     </section>
 </body>
