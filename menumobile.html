@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Quicksand:wght@300;500;700&display=swap'); 
+        :root{
+        --titulos: 20px;
+        --subtitulos: 16px;
+        --textospequeños:12px;
+        --white: #FFFFFF;
+        --black: #000000;
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #F7F7F7;
+        --hospital-green: #ACD9B2;
+        --dark: #232830;
+    }
+    body{
+        margin: 2.5%;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .mobileMenu{
+        padding: 2.5%;
+    }
+    .mobileMenu ul{
+        list-style: none;
+        margin: 15px 0 15px 0 ;
+        padding: 0;
+    }
+    .mobileMenu ul:nth-child(1){
+        border-bottom: 1px solid var(--very-light-pink);
+    }
+    .mobileMenu ul:nth-child(3){
+        position: absolute;
+        bottom: 0;
+    }
+    .mobileMenu ul li{
+        margin-bottom: 15px;
+    }
+    li a{
+        text-decoration: none;
+        color: var(--black);
+        font-weight: bold;
+    }
+    .email{
+        font-size: var(--textospequeños);
+        font-weight: 100;
+    }
+    .signout{
+        color: var(--hospital-green);
+    }
+    </style>
+</head>
+<body>
+    <div class="mobileMenu">
+        <ul class="categorías">
+            <li>
+                <a href="/">CATEGORIES</a>
+            </li>
+            <li>
+                <a href="/">All</a>
+            </li>
+            <li>
+                <a href="/">Clothes</a>
+            </li>
+            <li>
+                <a href="/">Electronics</a>
+            </li>
+            <li>
+                <a href="/">Furnitures</a>
+            </li>
+            <li>
+                <a href="/">Toys</a>
+            </li>
+            <li>
+                <a href="/">Others</a>
+            </li>
+        </ul>
+        <ul class="informacion">
+            <li>
+                <a href="/">My orders</a>
+            </li>
+            <li>
+                <a href="/">My account</a>
+            </li>
+        </ul>
+        <ul class="cuenta">
+            <li>
+                <a class="email" href="/">nicolassequera8@gmail.com</a>
+                <!-- <p href="/">nicolassequera8@gmail.com</p> -->
+            </li>
+            <li>
+                <a class="signout" href="/">Sign out</a>
+            </li>
+        </ul>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Quicksand:wght@300;500;700&display=swap'); 
+            :root{
+            --titulos: 20px;
+            --subtitulos: 16px;
+            --textospequeños:12px;
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --dark: #232830;
+        }
+        body{
+            margin: 2.5%;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .menuEscritorio{
+            width: 20%;
+            height: auto;
+            padding: 2.5% 2.5% 0 2.5%;
+            border: 1px solid var(--very-light-pink);
+            border-radius: 10px;
+        }
+        .menuEscritorio ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menuEscritorio ul li{
+            text-align: right;
+        }
+        .menuEscritorio ul li:not(:last-child){
+            font-weight: bold;
+            color: var(--black);
+            text-decoration: none;
+        }
+        .menuEscritorio ul li:last-child{
+            padding-top: 25px;
+            border-top: 1px solid var(--very-light-pink);
+        }
+        .menuEscritorio ul li:last-child a{
+            text-decoration: none;
+            
+            color: var(--hospital-green);
+            font-size: var(--subtitulos);
+        }
+        .menuEscritorio ul li a{
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: var(--black);
+            font-size: var(--subtitulos);
+            display: inline-block;
+
+        }
+    </style>
+</head>
+<body>
+    <section class="menuEscritorio">
+        <ul>
+            <li>
+                <a href="/" class="titulo">My orders</a>
+            </li>    
+            <li>
+                <a href="/" class="titulo">My account</a>
+            </li>    
+            <li>
+                <a href="/" class="titulo">Sign out</a>
+            </li>    
+        </ul>
+    </section>    
+</body>
+</html>

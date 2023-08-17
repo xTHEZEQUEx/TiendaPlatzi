@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta</title>
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Quicksand:wght@300;500;700&display=swap');
+            
+            
+            :root{
+            --titulos: 20px;
+            --subtitulos: 16px;
+            --textospequeños:12px;
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --dark: #232830;
+        }
+        body{
+            margin: 2.5%;
+            font-family: 'Quicksand', sans-serif;
+        }
+        /*@media ( max-width: 768px){ -->*/
+            
+            .login{
+                width: 100%;
+                display: grid;
+                place-items: center;
+            }    
+            .contenedorLogin{
+                width: 100%;
+                margin: 5%;
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .contenedorLogin img{
+                display: none;
+            }
+            .contenedorLogin h1{
+                font-size: var(--titulos);
+                text-align: left;
+                margin-bottom: 10%;
+            }
+            .contenedorLogin p{
+                color: var(--very-light-pink);
+                text-align: center;
+            }
+            .contenedorLogin form{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            form div{
+                display: flex;
+                flex-direction: column;
+            }
+            .contenedorLogin .form .label{
+                margin-bottom: 10px;
+                font-weight: 700;
+            }
+            .contenedorLogin .form .input{
+                /*width: 100%;*/
+                font-size: var(--subtitulos);
+                padding: 3%;
+                background-color: var(--text-input-field);
+                border-radius: 5px;
+                border: none;
+                margin-bottom: 5%;
+            }
+            input[type="submit"]{
+                width: 100%;
+                margin-top: 2%;
+                height: 35px;
+                background-color: var(--hospital-green);
+                color: var(--white);
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            ::placeholder{
+                font-size: var(--textospequeños);
+            }
+            @media (max-width:768px){
+                .contenedorLogin{
+                    width: 100%;
+                    height: 100%;
+                    margin: 5%;
+                    display: flex;
+                    grid-template-rows: auto 1fr auto; 
+                    flex-direction: column;
+                    justify-content:flex-start ;
+                }
+                .form{
+                    height: 100%;
+                    justify-content: space-between;
+                }
+                .contenedorLogin img{
+                    display: block;
+                    justify-self: center;
+                    margin-top: 1%;
+                    margin-bottom: 2.5%;
+                    width: 50%;
+                }
+            }
+            
+        
+    </style>
+</head>
+<body>
+    <section class="login" id="login">
+        <div class="contenedorLogin">
+            <!-- <img class="logo" src="./Logos/logo_yard_sale.svg"> -->
+            <h1 class="title">
+                My account
+            </h1>
+            
+            <form class="form" action="email.html">
+                <div>
+                    <label for="name" class="label">Name</label>
+                    <input type="text" id="name" placeholder="Nicolás" class="input">
+                    <label for="email" class="label">Email address</label>
+                    <input type="email" id="email" placeholder="nicolassequera8@gmail.com" class="input">
+                    <label for="newPassword" class="label">Password</label>
+                    <input type="password" id="newPassword" placeholder="*******" class="input">
+                </div>
+                <input type="submit" value="Create" class="primaryButton loginButton"><a href="./email.html" target="_blank"></a>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
