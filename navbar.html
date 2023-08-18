@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Quicksand:wght@300;500;700&display=swap'); 
+        :root{
+        --titulos: 20px;
+        --subtitulos: 16px;
+        --textospequeños:12px;
+        --white: #FFFFFF;
+        --black: #000000;
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #F7F7F7;
+        --hospital-green: #ACD9B2;
+        --dark: #232830;
+    }
+    body{
+        font-family: 'Quicksand', sans-serif;
+    }
+    .hamburguer{
+        display: none;
+    }
+    .navBar img.logo{
+        width: 100%;
+        height: 75%;
+    }
+    .navBar{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--very-light-pink);
+        padding: 0;
+        margin: 0 16px 0 16px;
+    }
+    .navbarIzquierda{
+        display: flex;
+        align-items: center;
+    }
+    .navbarIzquierda ul{
+        margin-left: 16px;
+    }
+    nav ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    
+    .navbarIzquierda ul a{  
+        text-decoration: none;
+        color: var(--very-light-pink);
+        padding: 10px;
+        border: 1px solid var(--white)
+    }
+    .navbarIzquierda ul a:hover{
+        padding: 10px;
+        color: var(--hospital-green);
+        border: 1px solid var(--hospital-green);
+        border-radius: 16px;
+        
+    }
+    .cuenta{
+        color: var(--very-light-pink);
+        font-size: var(--textospequeños);
+    }
+    .shoppingCart{
+        position: relative;
+    }
+    .shoppingCart div.cantidad{
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 12px;
+        height: 12px;
+        background-color: var(--hospital-green);
+        border-radius: 50%;
+        font-size: var(--textospequeños);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }
+    @media (max-width:640px){
+        .hamburguer{
+            display: block;
+        }
+        .navBar img.logo {
+            width: 100%;
+            height: 100%;
+        }
+        .navbarIzquierda ul,.cuenta {
+            display: none;
+        }
+        
+    }
+</style>
+
+</head>
+<body>
+    <nav class="navBar">
+        <img class="hamburguer" src="./Icons/icon_menu.svg">
+        <div class="navbarIzquierda">
+            <img src="./Logos/logo_yard_sale.svg" class="logo">
+            <ul>
+                <li><a href="">All</a></li>
+                <li><a href="">Clothes</a></li>
+                <li><a href="">Electronics</a></li>
+                <li><a href="">Furnitures</a></li>
+                <li><a href="">Toys</a></li>
+                <li><a href="">Others</a></li>
+            </ul>
+        </div>
+            
+        <div class="navbarDerecha">
+            <ul>
+                <li class="cuenta">nicolassequera8@gmail.com</li>
+                <li class="shoppingCart">
+                    <img src="./Icons/icon_shopping_cart.svg" alt="">
+                    <div class="cantidad">2</div>
+                </li>
+            </ul>
+        </div>
+    </nav>  
+</body>
+</html>
