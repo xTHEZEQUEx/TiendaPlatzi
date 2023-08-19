@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cinzel+Decorative:wght@400;700;900&family=Quicksand:wght@300;500;700&display=swap'); 
+        :root{
+        --titulos: 20px;
+        --subtitulos: 16px;
+        --textospequeños:12px;
+        --white: #FFFFFF;
+        --black: #000000;
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #F7F7F7;
+        --hospital-green: #ACD9B2;
+        --dark: #232830;
+    }
+    body{
+        margin: 2.5%;
+        font-family: 'Quicksand', sans-serif;
+    }
+    aside.detalleProducto{
+        gap:24px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center ;
+        justify-content: center;
+    }
+    .detalleProducto img:nth-child(1):hover{
+        cursor: pointer;
+    }
+    .detalleProducto img:nth-child(2){
+        width: 30%;
+        border-radius: 25px;
+    }
+    .addtocart{
+        border: none;
+        border-radius: 5px;
+        background-color: var(--hospital-green);
+        color: var(--white);
+        font-weight: bold;
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .infoProducto {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 50%;
+    }   
+    /*.close{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;        
+        width: 4%;
+        height: 5%;
+        background-color: var(--white);
+    }*/
+    .close{
+        display: none;
+    }
+    .infoProducto p:nth-child(1){
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+    .infoProducto p:nth-child(2), .infoProducto p:nth-child(3){
+        color: var(--very-light-pink);
+    }
+    @media (max-width:640px){
+        aside.detalleProducto {
+            gap: 7px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;            
+        }
+        .detalleProducto img:nth-child(2){
+            width: 100%;
+        }
+        .close{
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            
+            margin-right: 5%;
+            height: 32px;
+        }
+        .close img{
+            border-radius: 50%;
+            background-color: var(--text-input-field);
+            background-size: cover;
+            padding: 2.5%;
+        }
+        .infoProducto{
+            align-items: center;
+            width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <aside class="detalleProducto">
+        <div class="close">
+            <img src="./Icons/icon_close.png" alt="">
+        </div>
+        <img src="https://i.pinimg.com/750x/13/46/17/13461735a9a621a65207d0b19fee2704.jpg" alt="">
+        <div class="infoProducto">
+            <p>$35.00</p>
+            <p>Sa monda que</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, impedit, deserunt</p>
+            <button class="addtocart"><img src="./Icons/bt_add_to_cart.svg" alt="">Add to cart</button>
+        </div>
+    </aside>
+</body>
+</html>

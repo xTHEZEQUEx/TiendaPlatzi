@@ -20,19 +20,30 @@
     body{
         margin: 2.5%;
         font-family: 'Quicksand', sans-serif;
-    }
+    } 
     .contenedorOrden{
         width: 100%;
         height: 100vh;
         display: grid;
-        place-items: center;    
+        justify-items: end;
+        align-items: start;
+        
+    }
+    img.back{
+        transform: rotate(180deg);
+    }
+    .header{
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 25px;
+
     }
     .title{
         font-size: var(--titulos);
-        margin-bottom: 50px;
     }
     .miOrden{
-        width: 100%;
         display: grid;
         grid-template-rows: auto 1fr auto;
         width: 300px;
@@ -48,12 +59,9 @@
         align-items: center;
         margin: 15px 0 15px 0;
     }
-    /*.pedidos figure{
-        margin: 0   ;
-    }*/
     .pedidos  img{
         width: 75%;
-        border-radius: 25px;
+        border-radius: 16px;
         object-fit: cover;
     }
     .pedidos p:nth-child(2){
@@ -63,62 +71,77 @@
         color: var(--black);
         font-weight: bold;
     }
-    .informacion{
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 16px;
-        align-items: center;
-        background-color: var(--text-input-field);
-        margin-bottom: 25px;
-        border-radius: 10px;
-        padding: 0 5%;
-    }
-    .informacion :nth-child(1){
+    .checkout{
+        height: 35px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--hospital-green);
+        color: var(--white);
+        font-weight: bold;
+        width: 100%;
+        margin-top: 2%;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    .informacion p span:nth-child(1){
+    .total p{
+        margin: 0 5% 0 5%;
+    }
+    .total{
+        height: 35px;
+        border: none;
+        border-radius: 5px;
+        background-color: var(--text-input-field);
+        color: var(--black);
         font-weight: bold;
-        font-size: var(--subtitulos);
-    }
-    .informacion p span:nth-child(2){
         font-size: var(--textospequeños);
-        color: var(--very-light-pink);
+        width: 100%;
+        margin-top: 2%;
+        margin-bottom: 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    .informacion p:nth-child(2){
-        text-align: end;
-        font-weight: bold;
+    
+    @media (max-width:640px){
+        .contenedorOrden{
+            justify-items: center;
+        }
     }
-
-    </style>
+</style>
 </head>
 <body>
     <section class="contenedorOrden">
         <div class="miOrden">
-            <h1 class="title">My order</h1>
+            <div class="header">
+                <img class="back" src="./Icons/flechita.svg" alt="">
+                <h1 class="title">Shopping cart</h1>
+            </div>
             <div class="contenidoOrden">
-                <div class="informacion">
-                    <p>
-                        <span>16/08/2023</span>
-                        <span> 6 articles</span>
-                    </p>
-                    <p>$10062.00</p>
-                </div>  
                 <div class="pedidos">
-                        <img src="https://i.pinimg.com/564x/55/49/6c/55496cb6b487792b7954778712a5d81d.jpg" alt="">
+                    <img src="https://i.pinimg.com/564x/55/49/6c/55496cb6b487792b7954778712a5d81d.jpg" alt="">
                     <p>Mikasa</p>
                     <p>$562.00</p>
+                    <img class="quitar" src="./Icons/icon_close.png" alt="">
                 </div>
                 <div class="pedidos">
-                        <img src="https://i.pinimg.com/564x/55/49/6c/55496cb6b487792b7954778712a5d81d.jpg" alt="">
+                    <img src="https://i.pinimg.com/564x/55/49/6c/55496cb6b487792b7954778712a5d81d.jpg" alt="">
                     <p>Mikasa</p>
                     <p>$562.00</p>
+                    <img class="quitar" src="./Icons/icon_close.png" alt="">
                 </div>
                 <div class="pedidos">
-                        <img src="https://i.pinimg.com/564x/55/49/6c/55496cb6b487792b7954778712a5d81d.jpg" alt="">
+                    <img src="https://i.pinimg.com/564x/55/49/6c/55496cb6b487792b7954778712a5d81d.jpg" alt="">
                     <p>Mikasa</p>
                     <p>$562.00</p>
+                    <img class="quitar" src="./Icons/icon_close.png" alt="">
                 </div>
+                <div class="total">
+                    <p>Total</p>
+                    <p>$560.250</p>
+                </div>
+                <button class="checkout">Checkout</button>
+
             </div>
         </div>
     </section>
